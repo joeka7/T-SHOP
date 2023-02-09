@@ -1,3 +1,6 @@
+:root {
+    --main-color: #000010;
+}
 * {
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -6,6 +9,92 @@
 body {
     font-family: 'Open Sans', sans-serif;
 }
+/* Start Settings Box */
+.setting-box {
+    position: fixed;
+    left: -200px;
+    top: 0;
+    background-color: white;
+    width: 200px;
+    z-index: 1000;
+    min-height: 100vh;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.setting-box.open {
+    left: 0;
+}
+.setting-box .toggle-settings {
+    position: absolute;
+    right: -30px;
+    top: 100px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+}
+.setting-box .toggle-settings i {
+    padding: 8px 0;
+    width: 30px;
+}
+.setting-box .settings-container .option-box {
+    padding: 10px;
+    text-align: center;
+    background-color: var(--main-color);
+    margin: 10px;
+}
+.setting-box .settings-container .option-box h4 {
+    margin: 0;
+    color: white;
+}
+.setting-box .settings-container .option-box .colors-list {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 10px 0 0;
+}
+.setting-box .settings-container .option-box .colors-list li {
+    width: 25px;
+    height: 25px;
+    margin: 0 1px;
+    background-color: #333;
+    cursor: pointer;
+    display: inline-block;
+    opacity: 0.5;
+    border: 2px solid #eee;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+.setting-box .settings-container .option-box .colors-list li.active {
+    border-color: white;
+    opacity: 1;
+}
+.setting-box .settings-container .option-box .colors-list li:first-child {
+    background-color: #000010;
+}
+.setting-box .settings-container .option-box .colors-list li:nth-child(2) {
+    background-color: #d6ff38;
+}
+.setting-box .settings-container .option-box .colors-list li:nth-child(3) {
+    background-color: #ff5722;
+}
+.setting-box .settings-container .option-box .colors-list li:nth-child(4) {
+    background-color: #009688;
+}
+.setting-box .settings-container .option-box .colors-list li:nth-child(5) {
+    background-color: #ffc107;
+}
+/* End Settings Box */
 /* Start Landing Page */
 .landing-page {
     min-height: 100vh;
@@ -50,7 +139,7 @@ body {
 .header-area .container-logo {
     width: 300px;
     padding: 12px;
-    background-color: #000010;
+    background-color: var(--main-color);
 }
 @media (max-width: 767px) {
     .header-area .container-logo {
@@ -98,7 +187,7 @@ body {
     align-items: center;
 }
 .header-area .links li:hover {
-    background-color: #000010;
+    background-color: var(--main-color);
     color: white;
 }
 @media (min-width: 767px) {
@@ -174,6 +263,19 @@ body {
     -ms-transition: 0.2s;
     -o-transition: 0.2s;
 }
+.header-area li a {
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+}
+.header-area li:hover a {
+    color: white;
+    font-weight: inherit;
+}
 .introduction-text {
     position: absolute;
     left: 50%;
@@ -190,5 +292,28 @@ body {
     .introduction-text {
         line-height: 32px;
     }
+}
+.landing-page .contact-icon {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+}
+.landing-page .contact-icon i {
+    color: white;
+    position: relative;
+    z-index: 9999;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 /* End Landing Page */
