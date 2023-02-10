@@ -137,6 +137,7 @@ body {
     background-image: url("../imgs/T-SHOP_1.jpg");
     background-size: cover;
     position: relative;
+    margin-bottom: -100px;
 }
 .landing-page .offer {
     background-color: black;
@@ -331,12 +332,12 @@ body {
 }
 .landing-page .contact-icon {
     position: absolute;
-    bottom: 30px;
-    right: 30px;
+    bottom: 100px;
+    right: 100px;
 }
 .landing-page .contact-icon i {
     color: white;
-    position: relative;
+    position: fixed;
     z-index: 9999;
     font-size: 30px;
     width: 60px;
@@ -355,30 +356,65 @@ body {
 /* End Landing Page */
 /* Start First Section */
 .first-section {
-    background-color: #eee;
+    background: linear-gradient(#ffffff, #9198e5);
 }
 .first-section .section-container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+    z-index: 99;
+    padding: 25px;
+    width: 85%;
+    margin: auto;
+}
+@media (max-width: 767px) {
+    .first-section .section-container {
+        flex-direction: column;
+    }
+}
+.first-section .section-container div {
+    position: relative;
 }
 .first-section .section-container div img {
+    position: relative;
     width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 .first-section .section-container div .title {
     position: absolute;
-    bottom: 10px;
-    width: 298px;
+    width: 100%;
+    height: 99.3%;
+    bottom: 3.5px;
     text-align: center;
-    font-weight: normal;
-    background-color: var(--main-color);
     color: white;
-    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0;
+    cursor: pointer;
+    transition: 0.2s;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
-.first-section .section-container div .title::before {
-    content: "";
-    
+.first-section .section-container div:hover .title {
+    z-index: 1;
 }
 /* End First Section */
