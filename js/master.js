@@ -1,3 +1,27 @@
+// scroll icon 
+let arrowIcon = document.querySelector(".arrow-icon");
+let media = window.matchMedia("(max-width: 767px)");
+window.onscroll = function() {
+    if (media.matches) {
+        if (window.scrollY >= 600) {
+            arrowIcon.style.cssText = "display: block";
+        } else{
+            arrowIcon.style.cssText = "display: none";
+        };
+    };
+};
+arrowIcon.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+});
+// arrowIcon.onclick = function() {
+//     window.scrollTo({
+//         top: 0,
+//         behavior: "smooth",
+//     });
+// };
 // Toggle Sping Class On Icon
 document.querySelector(".toggle-settings i").onclick = function() {
     this.classList.toggle("fa-spin");
