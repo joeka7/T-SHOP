@@ -405,7 +405,7 @@ body {
 /* End Landing Page */
 /* Start First Section */
 .first-section {
-    background: linear-gradient(#ffffff, #9198e5);
+    background: radial-gradient(circle, rgba(194,217,219,1) 0%, rgba(59,88,122,1) 100%);
 }
 .first-section .section-container {
     position: relative;
@@ -479,8 +479,13 @@ body {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 70px;
-    margin: 0 30px 60px;
+    gap: 50px;
+    margin: 0 10px 60px;
+}
+@media (max-width: 767px) {
+    .new-drops .new-drops-container {
+        gap: 25px;
+    }
 }
 .new-drops .new-drops-container a {
     text-decoration: none;
@@ -495,6 +500,11 @@ body {
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+}
+@media (max-width: 767px) {
+    .new-drops .new-drops-container a .product img {
+        width: 160px;
+    }
 }
 .new-drops .new-drops-container a .product .description {
     position: absolute;
@@ -558,3 +568,75 @@ body {
     cursor: pointer;
 }
 /* End New Drops */
+/* Start Sale Section */
+.sale-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 90px 0;
+    background: linear-gradient(277deg, rgb(241 238 255) 33%, rgb(122 163 195) 100%);
+    border: 2px solid;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+@media (max-width: 767px) {
+    .sale-section {
+        flex-direction: column;
+        margin: 20px 15px 0;
+        background: linear-gradient(360deg, rgb(241 240 255) 70%, rgb(122 163 195) 100%);
+    }
+}
+.sale-section .sale-description {
+    width: 100%;
+    text-align: center;
+    padding: 35px
+}
+.sale-section .sale-description i {
+    font-size: 45px;
+    margin-bottom: 35px;
+}
+.sale-section .sale-description h3 {
+    margin: 0px 0 15px;
+    font-size: 28px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.sale-section .sale-description h2 {
+    font-size: 100px;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+}
+@media (max-width: 767px) {
+    .sale-section .sale-description h2 {
+        font-size: 58px;
+    }
+}
+.sale-section .sale-description p {
+    margin: 0;
+}
+@media (max-width: 767px) {
+    .sale-section .image {
+        width: 100%;
+    }
+}
+.sale-section .image img {
+    width: 100%;
+    border-radius: 0 10px 10px 0;
+    -webkit-border-radius: 0 10px 10px 0;
+    -moz-border-radius: 0 10px 10px 0;
+    -ms-border-radius: 0 10px 10px 0;
+    -o-border-radius: 0 10px 10px 0;
+}
+@media (max-width: 767px) {
+    .sale-section .image img {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0;
+}
+}
+/* End Sale Section */
