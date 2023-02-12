@@ -1,3 +1,13 @@
+// responsive links
+let toggler = document.querySelector(".toggle");
+let nav = document.querySelector("nav");
+let done = document.querySelector(".close");
+toggler.onclick = function() {
+    nav.style.transform = "translateY(0)";
+};
+done.onclick = function() {
+    nav.style.transform = "translateY(-100%)";
+};
 // scroll icon 
 let arrowIcon = document.querySelector(".arrow-icon");
 let media = window.matchMedia("(max-width: 767px)");
