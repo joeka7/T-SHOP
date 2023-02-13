@@ -66,7 +66,7 @@ function randomImgs() {
         backgroundInterval = setInterval(() => {
             let randomNumber = Math.floor(Math.random() * imgsArray.length);
             landingPage.style.backgroundImage = 'url("/imgs/T-SHOP_'+ imgsArray[randomNumber] +'")';
-        }, 8000);
+        }, 10000);
     };
 };
 randomImgs();
