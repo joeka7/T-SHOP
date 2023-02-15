@@ -369,6 +369,11 @@ body {
         -o-border-radius: 50%;
     }
 }
+@media (min-width: 767px) {
+    .landing-page .arrow-icon i {
+        display: none;
+    }
+}
 /* End Landing Page */
 /* Start First Section */
 .first-section {
