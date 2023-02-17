@@ -3,6 +3,9 @@ let toggler = document.querySelector(".toggle");
 let nav = document.querySelector("nav");
 let done = document.querySelector(".close");
 let settingBox = document.querySelector(".setting-box");
+let shopWoman = document.querySelector(".shop-woman-container");
+let shopWomanProduct = document.querySelector(".shop-woman-container .product");
+let shopWomanImg = document.querySelector(".shop-woman-container .product img");
 toggler.onclick = function() {
     nav.style.transform = "translateY(0)";
 };
@@ -70,3 +73,7 @@ function randomImgs() {
     };
 };
 randomImgs();
+// Start Shop Woman
+shopWomanProduct.onmouseover = function() {
+    shopWomanImg.style.cssText = "background-image: url(//imgs/shop_woman_1_hover.webp);"
+}
