@@ -878,7 +878,8 @@ body {
     }
 }
 /* End Shop New Page */
-/* Start Shop Woman */
+
+/* Start Shop Woman Page */
 .shop-woman .header-area .links .active {
     background-color: var(--second-main-color);
     color: var(--first-main-color);
@@ -981,8 +982,9 @@ body {
     -ms-border-radius: 8px 0 0 0;
     -o-border-radius: 8px 0 0 0;
 }
-/* End Shop Woman */
-/* Start Shop Man */
+/* End Shop Woman Page */
+
+/* Start Shop Man Page */
 .shop-man {
     background-color: var(--background-color);
 }
@@ -1085,4 +1087,75 @@ body {
     -ms-border-radius: 8px 0 0 0;
     -o-border-radius: 8px 0 0 0;
 }
-/* End Shop Man */
+/* End Shop Man Page */
+
+/* Start Log In Page */
+.log-in {
+    height: 100vh;
+    background-color: var(--background-color);
+}
+.log-in .header-area .links .active {
+    background-color: var(--second-main-color);
+    color: var(--first-main-color);
+}
+.log-in h2 {
+    text-align: center;
+    margin: 50px 0 20px;
+    font-size: 50px;
+    font-weight: 800;
+    color: var(--second-main-color);
+}
+.log-in .sign-up {
+    text-align: center;
+    font-size: 19px;
+}
+.log-in .sign-up a {
+    text-decoration: none;
+    color: #116dff;
+}
+.log-in .log-in-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.log-in .log-in-container .email {
+    position: relative;
+    width: 300px;
+}
+.log-in .log-in-container .email input {
+    background-color: var(--background-color);
+    width: 100%;
+    padding: 35px 0 10px 10px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #bbbb;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.log-in .log-in-container .email input:focus {
+    outline: none;
+    border-bottom: 2px solid #116dff;
+}
+.log-in .log-in-container .email input:hover {
+    border-bottom: 1px solid var(--second-main-color);
+}
+.log-in .log-in-container .email input::placeholder {
+    font-size: 20px;
+    color: var(--second-main-color);
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.log-in .log-in-container .email input:focus::placeholder {
+    left: 10px;
+    bottom: 40px;
+    position: absolute;
+    font-size: 15px;
+}
+/* End Log In Page */
