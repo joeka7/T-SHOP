@@ -1120,15 +1120,16 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin: 30px 0px;
 }
 .log-in .log-in-container form {
-    padding: 0 40px;
+    padding: 20px 40px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    flex-basis: 50%;
+    flex-basis: 25%;
 }
 .log-in .log-in-container form .email {
     position: relative;
@@ -1285,5 +1286,123 @@ body {
 }
 .log-in .log-in-container form .submit-btn label i {
     font-size: 12px;
+}
+.log-in .log-in-container .line {
+    position: relative;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.log-in .log-in-container .line span {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: var(--third-log-in-color);
+    z-index: 1;
+}
+.log-in .log-in-container .line p {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
+    color: var(--third-log-in-color);
+    z-index: 2;
+}
+.log-in .log-in-container .log-in-social {
+    flex-basis: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 40px;
+}
+.log-in .log-in-container .log-in-social .google,
+.log-in .log-in-container .log-in-social .facebook,
+.log-in .log-in-container .log-in-social .apple {
+    width: 320px;
+}
+.log-in .log-in-container .log-in-social .google .google-link,
+.log-in .log-in-container .log-in-social .facebook .facebook-link,
+.log-in .log-in-container .log-in-social .apple .apple-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    margin-bottom: 18px;
+}
+.log-in .log-in-container .log-in-social .google .google-link {
+    background-color: #4285f4;
+    border: 1px solid var(--second-log-in-color);
+}
+.log-in .log-in-container .log-in-social .facebook .facebook-link {
+    background-color: #3b5998;
+    border: 1px solid #3b5998;
+}
+.log-in .log-in-container .log-in-social .apple .apple-link {
+    background-color: var(--background-color);
+    border: 1px solid black;
+}
+.log-in .log-in-container .log-in-social .google .google-link .google-logo,
+.log-in .log-in-container .log-in-social .facebook .facebook-link .facebook-logo, 
+.log-in .log-in-container .log-in-social .apple .apple-link .apple-logo {
+    width: 50px;
+    height: 50px;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.log-in .log-in-container .log-in-social .google .google-link .google-logo {
+    border-right: 1px solid #4285f4;
+}
+.log-in .log-in-container .log-in-social .facebook .facebook-link .facebook-logo {
+    border-right: 1px solid #3b5998;
+}
+.log-in .log-in-container .log-in-social .apple .apple-link .apple-logo {
+    border-right: 1px solid black;
+}
+.log-in .log-in-container .log-in-social .google .google-link .google-logo img,
+.log-in .log-in-container .log-in-social .facebook .facebook-link .facebook-logo img,
+.log-in .log-in-container .log-in-social .apple .apple-link .apple-logo img {
+    width: 20px;
+    height: 20px;
+}
+.log-in .log-in-container .log-in-social .google .google-link p,
+.log-in .log-in-container .log-in-social .facebook .facebook-link p,
+.log-in .log-in-container .log-in-social .apple .apple-link p {
+    flex-basis: 85%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+}
+.log-in .log-in-container .log-in-social .apple .apple-link p {
+    color: black;
+}
+.log-in .log-in-container .log-in-social .sso a {
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--second-log-in-color);
+}
+.log-in .terms {
+    text-align: center;
+}
+.log-in .terms .terms-use-policy a {
+    font-size: 14px;
+    color: var(--first-log-in-color);
+}
+.log-in .terms .terms-use-policy a:nth-child(1) {
+    margin-right: 15px;
+}
+.log-in .terms .terms-text {
+    font-size: 14px;
+    margin-top: 10px;
+}
+.log-in .terms .terms-text a {
+    color: var(--first-log-in-color);
 }
 /* End Log In Page */
