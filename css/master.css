@@ -1,10 +1,10 @@
 :root {
-    --background-color: #f9fafa;
-    --first-log-in-color: #20303c;
-    --second-log-in-color: #116dff;
     --first-main-color: #d6ff38;
     --second-main-color: rgb(5 8 16);
-    --settings-color: #9e9e9e;
+    --first-log-in-color: #20303c;
+    --second-log-in-color: #116dff;
+    --third-log-in-color: #9e9e9e;
+    --background-color: #f9fafa;
     --main-transition: 0.3s
 }
 * {
@@ -1121,125 +1121,169 @@ body {
     justify-content: space-evenly;
     align-items: center;
 }
-.log-in .log-in-container .email {
+.log-in .log-in-container form {
+    padding: 0 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: 50%;
+}
+.log-in .log-in-container form .email {
     position: relative;
     width: 300px;
+    border-bottom: 1px solid #adadaa;
+    margin: 30px 0 18px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
-.log-in .log-in-container .email input {
-    background-color: var(--background-color);
+.log-in .log-in-container form .email:hover {
+    border-bottom-color: var(--first-log-in-color);
+}
+.log-in .log-in-container form .email input {
     width: 100%;
-    padding: 35px 0 10px 10px;
-    border-left: none;
-    border-top: none;
-    border-right: none;
-    border-bottom: 1px solid #bbbb;
-    transition: var(--main-transition);
-    -webkit-transition: var(--main-transition);
-    -moz-transition: var(--main-transition);
-    -ms-transition: var(--main-transition);
-    -o-transition: var(--main-transition);
-}
-.log-in .log-in-container .email input:focus {
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
     outline: none;
-    border-bottom: 2px solid var(--second-log-in-color);
 }
-.log-in .log-in-container .email input:hover {
-    border-bottom: 1px solid var(--second-main-color);
+.log-in .log-in-container form .email input:valid {
+    background: none;
 }
-.log-in .log-in-container .email input::placeholder {
-    font-size: 20px;
-    color: var(--first-log-in-color);
+.log-in .log-in-container form .email label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    font-size: 16px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     transition: var(--main-transition);
     -webkit-transition: var(--main-transition);
     -moz-transition: var(--main-transition);
     -ms-transition: var(--main-transition);
     -o-transition: var(--main-transition);
 }
-.log-in .log-in-container .email input:focus::placeholder {
-    left: 10px;
-    bottom: 40px;
+.log-in .log-in-container form .email span::before {
+    content: "";
     position: absolute;
-    font-size: 15px;
+    top: 40px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #2691d9;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
-.log-in .log-in-container .email .re {
+.log-in .log-in-container form .email input:focus ~ label,
+.log-in .log-in-container form .email input:valid ~ label {
+    top: -5px;
+    font-size: 12px;
+    color: #2691d9;
+}
+.log-in .log-in-container form .email input:focus ~ span::before,
+.log-in .log-in-container form .email input:valid ~ span::before {
+    width: 100%;
+}
+.log-in .log-in-container form .check {
+    font-size: 14px;
+    color: var(--first-log-in-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 15px;
-    font-size: 13px;
-    color: var(--first-log-in-color);
+    width: 300px;
 }
-.log-in .log-in-container .email .re .check {
+.log-in .log-in-container form .check div {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
-.log-in .log-in-container .email .re .check .check-box {
+.log-in .log-in-container form .check div input {
     width: 15px;
     height: 15px;
     margin-right: 5px;
-}
-.log-in .log-in-container .email .re .check label {
     cursor: pointer;
 }
-.log-in .log-in-container .email .re p {
-    font-size: 14px;
+.log-in .log-in-container form .check div label {
     cursor: pointer;
 }
-.log-in .log-in-container .email .re a {
+.log-in .log-in-container form .check a {
     text-decoration: none;
     color: var(--first-log-in-color);
 }
-.log-in .log-in-container .email .re a:hover {
+.log-in .log-in-container form .check a:hover {
     color: var(--second-log-in-color);
 }
-.log-in .log-in-container .email .continue-email {
-    margin: 50px auto;
-    width: 200px;
-    height: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: var(--main-transition);
-    -webkit-transition: var(--main-transition);
-    -moz-transition: var(--main-transition);
-    -ms-transition: var(--main-transition);
-    -o-transition: var(--main-transition);
-    border-radius: 40px;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 40px;
-    -ms-border-radius: 40px;
-    -o-border-radius: 40px;
-}
-.log-in .log-in-container .email .continue-email:hover {
-    background-color: var(--second-log-in-color);
-}
-.log-in .log-in-container .email .continue-email a {
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
+.log-in .log-in-container form .submit-btn {
+    position: relative;
     border: 1px solid var(--second-log-in-color);
     color: var(--second-log-in-color);
-    font-size: 15px;
+    width: 200px;
+    height: 45px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: var(--main-transition);
-    -webkit-transition: var(--main-transition);
-    -moz-transition: var(--main-transition);
-    -ms-transition: var(--main-transition);
-    -o-transition: var(--main-transition);
     border-radius: 40px;
     -webkit-border-radius: 40px;
     -moz-border-radius: 40px;
     -ms-border-radius: 40px;
     -o-border-radius: 40px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
-.log-in .log-in-container .email .continue-email:hover a {
+.log-in .log-in-container form .submit-btn:hover {
+    background-color: var(--second-log-in-color);
     color: white;
 }
-.log-in .log-in-container .email .continue-email a i {
-    font-size: 13px;
-    margin-left: 5px;
+.log-in .log-in-container form .submit-btn input {
+    width: 100%;
+    height: 100%;
+    color: var(--second-log-in-color);
+    font-size: 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    padding-right: 10px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+}
+.log-in .log-in-container form .submit-btn:hover input {
+    color: white;
+}
+.log-in .log-in-container form .submit-btn label {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.log-in .log-in-container form .submit-btn label i {
+    font-size: 12px;
 }
 /* End Log In Page */

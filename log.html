@@ -66,21 +66,41 @@
         <h2>Log In</h2>
         <p class="sign-up">Don't have an account? <a href="#">Sign Up</a></p>
         <div class="log-in-container">
-            <div class="email">
-                <input type="email" placeholder="Email">
-                <div class="re">
-                    <span class="check">
-                        <input class="check-box" type="checkbox" id="remember-me" checked>
-                        <label for="remember-me">Remember Me</label>
-                    </span>
+            <form method="post">
+                <div class="email">
+                    <input autocomplete="email" type="email" id="email" required>
+                    <label for="email">Email</label>
+                    <span></span>
+                </div>
+                <div class="check">
+                    <div>
+                        <input type="checkbox" id="remember-me" checked>
+                        <label for="remember-me">Remember me</label>
+                    </div>
                     <a href="#">Forgot Email?</a>
                 </div>
-                <div class="continue-email">
-                    <a href="#">Continue with Email
+                <div class="submit-btn">
+                    <input type="submit" value="Continue with Email" id="btn">
+                    <label for="btn">
                         <i class="fa-solid fa-angle-right"></i>
-                    </a>
+                    </label>
                 </div>
+            </form>
+            <!-- <form action="">
+                <input type="email" placeholder="Email" required>
+                <div class="re">
+                <span class="check">
+                    <input class="check-box" type="checkbox" id="remember-me" checked>
+                    <label for="remember-me">Remember Me</label>
+                </span>
+                <a href="#">Forgot Email?</a>
             </div>
+            <div class="continue-email">
+                <input type="submit">
+                <a href="#">Continue with Email
+                    <i class="fa-solid fa-angle-right"></i>
+                </a>
+            </div> -->
             <div class="log-in-social">
                 <div class="google">
                     <div class="google-icon">
