@@ -2,14 +2,16 @@
 let toggler = document.querySelector(".toggle");
 let nav = document.querySelector("nav");
 let done = document.querySelector(".close");
-let settingBox = document.querySelector(".setting-box");
+// ################
+// ################
 toggler.onclick = function() {
     nav.style.transform = "translateY(0)";
 };
 done.onclick = function() {
     nav.style.transform = "translateY(-100%)";
 };
-// scroll icon 
+// ################
+// scroll icon
 let arrowIcon = document.querySelector(".arrow-icon");
 let media = window.matchMedia("(max-width: 767px)");
 window.onscroll = function() {
@@ -20,6 +22,9 @@ window.onscroll = function() {
             arrowIcon.style.cssText = "display: none";
         };
     };
+};
+window.onload = function() {
+    arrowIcon.style.cssText = "display: none";
 };
 arrowIcon.addEventListener("click", function() {
     window.scrollTo({

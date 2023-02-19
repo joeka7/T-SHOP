@@ -1122,6 +1122,11 @@ body {
     align-items: center;
     margin: 30px 0px;
 }
+@media (max-width: 767px) {
+    .log-in .log-in-container {
+        flex-direction: column-reverse;
+    }
+}
 .log-in .log-in-container form {
     padding: 20px 40px;
     box-sizing: border-box;
@@ -1130,6 +1135,11 @@ body {
     align-items: center;
     flex-direction: column;
     flex-basis: 25%;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
 }
 .log-in .log-in-container form .email {
     position: relative;
@@ -1207,6 +1217,11 @@ body {
     align-items: center;
     width: 300px;
 }
+@media (max-width: 767px) {
+    .log-in .log-in-container form .check {
+        display: none;
+    }
+}
 .log-in .log-in-container form .check div {
     display: flex;
     align-items: center;
@@ -1248,6 +1263,11 @@ body {
     -ms-transition: var(--main-transition);
     -o-transition: var(--main-transition);
 }
+@media (max-width: 767px) {
+    .log-in .log-in-container form .submit-btn {
+        display: none;
+    }
+}
 .log-in .log-in-container form .submit-btn:hover {
     background-color: var(--second-log-in-color);
     color: white;
@@ -1279,6 +1299,7 @@ body {
 .log-in .log-in-container form .submit-btn label {
     position: absolute;
     right: 15px;
+    top: 16px;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -1293,6 +1314,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@media (max-width: 767px) {
+    .log-in .log-in-container .line {
+        display: none;
+    }
 }
 .log-in .log-in-container .line span {
     position: absolute;
