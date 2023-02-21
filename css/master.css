@@ -3,7 +3,7 @@
     --second-main-color: rgb(5 8 16);
     --first-log-in-color: #20303c;
     --second-log-in-color: #116dff;
-    --third-log-in-color: #9e9e9e;
+    --third-log-in-color: #e0e3e5;
     --background-color: #f9fafa;
     --main-transition: 0.3s
 }
@@ -1093,7 +1093,6 @@ body {
 
 /* Start Log In Page */
 .log-in {
-    height: 100vh;
     background-color: var(--background-color);
 }
 .log-in .header-area .links .active {
@@ -1125,6 +1124,7 @@ body {
 @media (max-width: 767px) {
     .log-in .log-in-container {
         flex-direction: column-reverse;
+        margin: 120px 0px 0;
     }
 }
 .log-in .log-in-container form {
@@ -1141,6 +1141,11 @@ body {
     -ms-transition: var(--main-transition);
     -o-transition: var(--main-transition);
 }
+@media (max-width: 767px) {
+    .log-in .log-in-container form {
+        padding: 0;
+    }
+}
 .log-in .log-in-container form .email {
     position: relative;
     width: 300px;
@@ -1151,6 +1156,11 @@ body {
     -moz-transition: var(--main-transition);
     -ms-transition: var(--main-transition);
     -o-transition: var(--main-transition);
+}
+@media (max-width: 767px) {
+    .log-in .log-in-container form .email {
+        margin-top: 0;
+    }
 }
 .log-in .log-in-container form .email:hover {
     border-bottom-color: var(--first-log-in-color);
@@ -1266,6 +1276,9 @@ body {
 @media (max-width: 767px) {
     .log-in .log-in-container form .submit-btn {
         display: none;
+        background-color: var(--second-log-in-color);
+        width: 100%;
+        margin-top: 30px;
     }
 }
 .log-in .log-in-container form .submit-btn:hover {
@@ -1293,6 +1306,11 @@ body {
     -ms-transition: var(--main-transition);
     -o-transition: var(--main-transition);
 }
+@media (max-width: 767px) {
+    .log-in .log-in-container form .submit-btn input {
+        color: white;
+    }
+}
 .log-in .log-in-container form .submit-btn:hover input {
     color: white;
 }
@@ -1305,8 +1323,75 @@ body {
     justify-content: center;
     align-items: center;
 }
+@media (max-width: 767px) {
+    .log-in .log-in-container form .submit-btn label {
+        color: white;
+        right: 65px;
+        top: 15px;
+    }
+}
 .log-in .log-in-container form .submit-btn label i {
     font-size: 12px;
+}
+@media (max-width: 767px) {
+    .log-in .log-in-container form .submit-btn label i {
+        font-size: 14px;
+    }
+}
+.log-in .log-in-container .login-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+@media (min-width: 0px) {
+    .log-in .log-in-container .login-mobile {
+        display: none;
+    }
+}
+.log-in .log-in-container .login-mobile p {
+    text-transform: uppercase;
+    font-size: 15px;
+}
+.log-in .log-in-container .login-mobile .social-accounts {
+    display: flex;
+    align-items: center;
+}
+.log-in .log-in-container .login-mobile .social-accounts .facebook,
+.log-in .log-in-container .login-mobile .social-accounts .google {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.log-in .log-in-container .login-mobile .social-accounts .facebook {
+    border-color: #3b5998;
+    margin-right: 5px;
+}
+.log-in .log-in-container .login-mobile .social-accounts .google {
+    border-color: var(--second-log-in-color);
+    margin-left: 5px;
+}
+.log-in .log-in-container .login-mobile .social-accounts .facebook a,
+.log-in .log-in-container .login-mobile .social-accounts .google a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.log-in .log-in-container .login-mobile .social-accounts .facebook a img,
+.log-in .log-in-container .login-mobile .social-accounts .google a img {
+    width: 18px;
+    height: 18px;
 }
 .log-in .log-in-container .line {
     position: relative;
@@ -1338,6 +1423,32 @@ body {
     color: var(--third-log-in-color);
     z-index: 2;
 }
+.log-in .log-in-container .line-responsive {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 767px) {
+    .log-in .log-in-container .line-responsive {
+        display: none;
+    }
+}
+.log-in .log-in-container .line-responsive span {
+    position: absolute;
+    width: 300px;
+    height: 2px;
+    background-color: var(--third-log-in-color);
+    z-index: 1;
+}
+.log-in .log-in-container .line-responsive p {
+    font-size: 12px;
+    background-color: var(--background-color);
+    z-index: 2;
+    padding: 20px 10px;
+    text-transform: uppercase;
+}
+
 .log-in .log-in-container .log-in-social {
     flex-basis: 25%;
     display: flex;
@@ -1345,6 +1456,11 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 20px 40px;
+}
+@media (max-width: 767px) {
+    .log-in .log-in-container .log-in-social {
+        padding: 20px 0;
+    }
 }
 .log-in .log-in-container .log-in-social .google,
 .log-in .log-in-container .log-in-social .facebook,
@@ -1416,6 +1532,7 @@ body {
 }
 .log-in .terms {
     text-align: center;
+    padding: 25px;
 }
 .log-in .terms .terms-use-policy a {
     font-size: 14px;
