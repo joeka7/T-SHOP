@@ -26,6 +26,7 @@
 }
 body {
     font-family: 'Open Sans', sans-serif;
+    background-color: var(--background-color);
 }
 /* Start Landing Page */
 .landing-page {
@@ -398,9 +399,6 @@ body {
 }
 /* End Landing Page */
 /* Start First Section */
-.first-section {
-    background-color: var(--background-color);
-}
 .first-section .section-container {
     position: relative;
     display: flex;
@@ -857,9 +855,6 @@ body {
         background-color: var(--first-main-color);
     }
 }
-.shop-new {
-    background-color: var(--background-color);
-}
 .shop-new .new-drops h2 {
     background-image: linear-gradient(0deg, #D6FF38 0%, #FFFFFF 100%);
     text-align: center;
@@ -890,9 +885,6 @@ body {
     .shop-woman .header-area .responsive-links .active {
         background-color: var(--first-main-color);
     }
-}
-.shop-woman {
-    background-color: var(--background-color);
 }
 .shop-woman .shop-woman-container {
     display: flex;
@@ -987,9 +979,6 @@ body {
 /* End Shop Woman Page */
 
 /* Start Shop Man Page */
-.shop-man {
-    background-color: var(--background-color);
-}
 .shop-man .header-area .links .active {
     background-color: var(--second-main-color);
     color: var(--first-main-color);
@@ -1092,9 +1081,6 @@ body {
 /* End Shop Man Page */
 
 /* Start Log In Page */
-.log-in {
-    background-color: var(--background-color);
-}
 .log-in .header-area .links .active {
     background-color: var(--second-main-color);
     color: var(--first-main-color);
@@ -1141,9 +1127,9 @@ body {
     -ms-transition: var(--main-transition);
     -o-transition: var(--main-transition);
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .log-in .log-in-container form {
-        padding: 0;
+        padding: 20px;
     }
 }
 .log-in .log-in-container form .email {
@@ -1457,9 +1443,9 @@ body {
     flex-direction: column;
     padding: 20px 40px;
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .log-in .log-in-container .log-in-social {
-        padding: 20px 0;
+        padding: 20px;
     }
 }
 .log-in .log-in-container .log-in-social .google,
