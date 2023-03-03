@@ -1578,3 +1578,48 @@ body {
     color: var(--first-log-in-color);
 }
 /* End Log In Page */
+/* Start Product One Page */
+.product-one {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    margin: 50px 0;
+}
+.product-one div img {
+    height: 600px;
+    border: 1px solid var(--first-log-in-color);
+}
+.product-one .description .product {
+    margin-bottom: 25px;
+}
+.product-one .description .product h2 {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.product-one .description .price {
+    display: block;
+    font-size: 18px;
+    color: #575757;
+    margin-bottom: 25px;
+}
+.product-one .description label {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    margin-bottom: 25px;
+    width: fit-content;
+}
+.product-one .description label span {
+    margin-bottom: 10px;
+}
+.product-one .description label input {
+    font: normal normal normal 16px/1.4em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
+    padding-left: 1em;
+    padding-right: 2em;
+    width: 90px;
+    height: 45px;
+}
+/* End Product One Page */
