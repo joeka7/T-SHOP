@@ -1578,52 +1578,98 @@ body {
     color: var(--first-log-in-color);
 }
 /* End Log In Page */
-/* Start Product One Page */
-.product-one {
+
+/* Start Product Pages */
+.product-page .product {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     margin: 80px 0;
 }
 @media (max-width: 992px) {
-    .product-one {
+    .product-page .product {
         flex-direction: column;
+        margin-left: 30px;
+        margin-right: 30px;
     }
 }
-.product-one .image {
+.product-page .product .image {
     flex-basis: 25%;
     margin-right: 30px;
 }
-.product-one .image img {
+@media (max-width: 992px) {
+    .product-page .product .image {
+        margin: 0;
+        text-align: center;
+    }
+}
+.product-page .product .image img {
     height: 600px;
     border: 1px solid var(--first-log-in-color);
 }
-.product-one .image p {
+@media (max-width: 767px) {
+    .product-page .product .image img {
+        width: 100%;
+        height: 100%;    
+    }
+}
+.product-page .product .image .description-full {
     text-align: center;
     margin: 25px 0 0;
     line-height: 20px;
     letter-spacing: 1.5px;
     font-size: 14px;
 }
-.product-one .description {
+@media (max-width: 992px) {
+    .product-page .product .image .description-full {
+        display: none;
+    }
+}
+.product-page .product .description {
     flex-basis: 25%;
     margin-left: 30px;
 }
-.product-one .description .product {
+@media (max-width: 992px) {
+    .product-page .product .description {
+        margin: 0;
+    }
+}
+.product-page .product .description .product-desc {
     margin-bottom: 25px;
 }
-.product-one .description .product h2 {
+@media (max-width: 992px) {
+    .product-page .product .description .product-desc {
+        display: flex;
+        justify-content: flex-start;
+        align-items: start;
+        flex-direction: column-reverse;
+        margin-bottom: 10px;
+        margin-top: 25px;
+    }
+}
+.product-page .product .description .product-desc h2 {
     font-size: 30px;
     font-weight: 900;
     margin-bottom: 10px;
 }
-.product-one .description .price {
+@media (max-width: 992px) {
+    .product-page .product .description .product-desc h2 {
+        margin-top: 10px;
+        font-size: 35px;
+    }
+}
+.product-page .product .description .price {
     display: block;
     font-size: 18px;
     color: #575757;
     margin-bottom: 25px;
 }
-.product-one .description label {
+@media (max-width: 992px) {
+    .product-page .product .description .price {
+        font-size: 25px;
+    }
+}
+.product-page .product .description label {
     display: flex;
     justify-content: start;
     align-items: start;
@@ -1631,10 +1677,10 @@ body {
     margin-bottom: 25px;
     width: fit-content;
 }
-.product-one .description label span {
+.product-page .product .description label span {
     margin-bottom: 10px;
 }
-.product-one .description label input {
+.product-page .product .description label input {
     font: normal normal normal 16px/1.4em avenir-lt-w01_35-light1475496,avenir-lt-w05_35-light,sans-serif;
     padding-left: 1em;
     padding-right: 5px;
@@ -1645,7 +1691,7 @@ body {
     color: #575757;
     
 }
-.product-one .description button {
+.product-page .product .description button {
     display: block;
     width: 100%;
     height: 45px;
@@ -1661,18 +1707,26 @@ body {
     -ms-transition: var(--main-transition);
     -o-transition: var(--main-transition);
 }
-.product-one .description button:hover {
+.product-page .product .description button:hover {
     background-color: rgba(0, 0, 0, 0.7);
     color: rgba(214, 255, 56, 0.7);
 }
-.product-one .description .info {
+.product-page .product .description .description-small {
+    display: none;
+}
+@media (max-width: 992px) {
+    .product-page .product .description .description-small {
+        display: block;
+    }
+}
+.product-page .product .description .info {
     display: flex;
     justify-content: center;
     align-items: start;
     flex-direction: column;
     margin-top: 50px;
 }
-.product-one .description .info div {
+.product-page .product .description .info div {
     width: 100%;
     height: 35px;
     display: flex;
@@ -1681,16 +1735,16 @@ body {
     padding-bottom: 10px;
     cursor: pointer;
 }
-.product-one .description .info div:not(:last-child) {
+.product-page .product .description .info div:not(:last-child) {
     margin-bottom: 25px;
     border-bottom: 1px solid var(--second-main-color);
 }
-.product-one .description .info div p {
+.product-page .product .description .info div p {
     text-transform: uppercase;
     font-size: 20px;
     margin: 0;
 }
-.product-one .description .info div i {
+.product-page .product .description .info div i {
     font-size: 13px;
 }
-/* End Product One Page */
+/* End Product Pages */
